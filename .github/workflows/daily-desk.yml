@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # raw URL of your price pipeline's log - EDIT THIS
-      FORECAST_LOG_URL: "https://raw.githubusercontent.com/Evanssdas/gb-price-forecaster/main/price_predictions_log.csv"
+      FORECAST_LOG_URL: "https://raw.githubusercontent.com/Evanssdas/Price-Forecaster/main/price_predictions_log.csv"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
