@@ -1,0 +1,30 @@
+name: Daily desk report
+
+on:
+  schedule:
+    - cron: "0 21 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  desk:
+    runs-on: ubuntu-latest
+    env:
+      FORECAST_LOG_URL: "https://raw.githubusercontent.com/Evanssdas/Price-Forecaster/main/price_predictions_log.csv"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python daily_desk.py
+      - run: python risk_report.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add desk_log.csv RISK_REPORT.md
+          git commit -m "desk report + risk $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push
