@@ -1,2 +1,3 @@
 date_made,target_date,forecast,market,spread,lean,settled,signal_pnl,daily_vol_pct,var_ref_100mwh,max_size_at_limit,status
 2026-07-12,2026-07-13,,,,,,,43.7,7941.0,189.0,spread skipped: HTTPError
+2026-07-13,2026-07-14,106.34,106.42,-0.08,FLAT,,,43.7,7678.0,195.0,ok
