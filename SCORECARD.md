@@ -1,29 +1,29 @@
 # Performance Scorecard
-_Auto-generated 2026-07-25. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-07-26. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **14**  
+Graded days: **15**  
 _Sample below 20 - treat every number here as provisional._
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 34.24 | 39.44 |
-| Benchmark: yesterday's price | 16.53 | 21.32 |
-| Benchmark: 7-day average | 12.27 | 16.51 |
-| Benchmark: same day last week | 17.90 | 23.00 |
+| **Model** | 34.10 | 38.99 |
+| Benchmark: yesterday's price | 16.60 | 21.09 |
+| Benchmark: 7-day average | 12.10 | 16.15 |
+| Benchmark: same day last week | 16.74 | 22.22 |
 
-**Directional accuracy:** 43% (did we call up/down correctly vs yesterday, over 14 days)
+**Directional accuracy:** 47% (did we call up/down correctly vs yesterday, over 15 days)
 
-**Bias:** -34.24 £/MWh (under-forecasting)
+**Bias:** -34.10 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE - but the sample is small.
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **8** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **9** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
@@ -40,8 +40,8 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 28 | **+0.16** |
-| 90 days | 71 | **+0.10** |
+| 30 days | 28 | **+0.17** |
+| 90 days | 70 | **+0.10** |
 
 ### NO ACTION: correlation is +0.10.
 
