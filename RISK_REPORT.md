@@ -1,14 +1,14 @@
 # Daily Risk Report
-_Generated 2026-07-26 - GB day-ahead power. Auto-updated daily._
+_Generated 2026-07-27 - GB day-ahead power. Auto-updated daily._
 
 ## Market conditions
 
 | metric | value |
 |---|---|
-| spot (last daily peak) | £123.84/MWh |
-| 30-day daily volatility | **14.5%** |
-| 90-day daily volatility | 28.5% |
-| 90-day range | £95 - £561/MWh |
+| spot (last daily peak) | £85.28/MWh |
+| 30-day daily volatility | **15.1%** |
+| 90-day daily volatility | 28.8% |
+| 90-day range | £85 - £561/MWh |
 | worst single-day move (90d) | -57.3% |
 
 **Volatility regime: CALM** (30d vs 90d). 
@@ -20,10 +20,10 @@ VaR = position value x daily volatility x z. Using the 30-day volatility.
 
 | position | side | volume (MWh) | value (£) | VaR 95% (£) | VaR 99% (£) |
 |---|---|---|---|---|---|
-| GB power DA (reference) | long | 100 | 12,384 | 2,960 | 4,180 |
-| **PORTFOLIO** | | | **12,384** | **2,960** | **4,180** |
+| GB power DA (reference) | long | 100 | 8,528 | 2,131 | 3,009 |
+| **PORTFOLIO** | | | **8,528** | **2,131** | **3,009** |
 
-Interpretation: on roughly 1 day in 20, a loss of at least **£2,960** would be expected.
+Interpretation: on roughly 1 day in 20, a loss of at least **£2,131** would be expected.
 
 ## Stress tests
 
@@ -31,12 +31,12 @@ Deterministic shocks. Unlike VaR, these carry no probability - they size the sce
 
 | price shock | portfolio P&L (£) |
 |---|---|
-| -50% | -6,192 |
-| -20% | -2,477 |
-| -10% | -1,238 |
-| +10% | +1,238 |
-| +20% | +2,477 |
-| +50% | +6,192 |
+| -50% | -4,264 |
+| -20% | -1,706 |
+| -10% | -853 |
+| +10% | +853 |
+| +20% | +1,706 |
+| +50% | +4,264 |
 
 Note: the worst single day in the last 90 was **-57.3%**, so the larger shocks above are not hypothetical.
 
@@ -45,13 +45,13 @@ Note: the worst single day in the last 90 was **-57.3%**, so the larger shocks a
 | limit | set | current | status |
 |---|---|---|---|
 | max single position | 20,000 MWh | 100 MWh | OK |
-| max portfolio VaR (95%) | £15,000 | £2,960 | OK |
+| max portfolio VaR (95%) | £15,000 | £2,131 | OK |
 
 ## Position sizing at current volatility
 
-At **14.5%** daily volatility and a £15,000 VaR limit, the largest permissible position is:
+At **15.1%** daily volatility and a £15,000 VaR limit, the largest permissible position is:
 
-### **507 MWh**
+### **704 MWh**
 
 Volatility dictates size. When volatility rises, the permissible position falls, even if conviction does not.
 
