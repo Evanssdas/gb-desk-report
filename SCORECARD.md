@@ -1,29 +1,29 @@
 # Performance Scorecard
-_Auto-generated 2026-07-27. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-07-28. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **16**  
+Graded days: **17**  
 _Sample below 20 - treat every number here as provisional._
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 33.91 | 38.55 |
-| Benchmark: yesterday's price | 15.58 | 20.42 |
-| Benchmark: 7-day average | 11.99 | 15.85 |
-| Benchmark: same day last week | 15.88 | 21.53 |
+| **Model** | 33.78 | 38.18 |
+| Benchmark: yesterday's price | 14.84 | 19.83 |
+| Benchmark: 7-day average | 11.68 | 15.46 |
+| Benchmark: same day last week | 15.58 | 21.06 |
 
-**Directional accuracy:** 50% (did we call up/down correctly vs yesterday, over 16 days)
+**Directional accuracy:** 47% (did we call up/down correctly vs yesterday, over 17 days)
 
-**Bias:** -33.91 £/MWh (under-forecasting)
+**Bias:** -33.78 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE - but the sample is small.
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **9** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **10** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
@@ -40,10 +40,10 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 28 | **+0.17** |
-| 90 days | 69 | **+0.10** |
+| 30 days | 28 | **+0.23** |
+| 90 days | 69 | **+0.16** |
 
-### NO ACTION: correlation is +0.10.
+### NO ACTION: correlation is +0.16.
 
 **Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
 
