@@ -1,28 +1,28 @@
 # Performance Scorecard
-_Auto-generated 2026-08-08. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-08-09. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **27**
+Graded days: **28**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 35.76 | 39.95 |
-| Benchmark: yesterday's price | 15.00 | 19.27 |
-| Benchmark: 7-day average | 12.26 | 16.24 |
-| Benchmark: same day last week | 16.36 | 22.52 |
+| **Model** | 36.17 | 40.24 |
+| Benchmark: yesterday's price | 14.68 | 18.96 |
+| Benchmark: 7-day average | 12.17 | 16.05 |
+| Benchmark: same day last week | 15.92 | 22.12 |
 
-**Directional accuracy:** 48% (did we call up/down correctly vs yesterday, over 27 days)
+**Directional accuracy:** 46% (did we call up/down correctly vs yesterday, over 28 days)
 
-**Bias:** -35.76 £/MWh (under-forecasting)
+**Bias:** -36.17 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE.
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **17** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **18** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
@@ -39,10 +39,10 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 29 | **+0.38** |
-| 90 days | 71 | **+0.13** |
+| 30 days | 29 | **+0.37** |
+| 90 days | 70 | **+0.12** |
 
-### NO ACTION: correlation is +0.13.
+### NO ACTION: correlation is +0.12.
 
 **Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
 
