@@ -1,28 +1,28 @@
 # Performance Scorecard
-_Auto-generated 2026-08-15. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-08-16. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **34**
+Graded days: **35**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 42.10 | 47.72 |
-| Benchmark: yesterday's price | 15.77 | 19.96 |
-| Benchmark: 7-day average | 15.03 | 21.08 |
-| Benchmark: same day last week | 19.88 | 28.77 |
+| **Model** | 42.41 | 47.88 |
+| Benchmark: yesterday's price | 15.99 | 20.07 |
+| Benchmark: 7-day average | 15.07 | 20.96 |
+| Benchmark: same day last week | 19.47 | 28.37 |
 
-**Directional accuracy:** 47% (did we call up/down correctly vs yesterday, over 34 days)
+**Directional accuracy:** 49% (did we call up/down correctly vs yesterday, over 35 days)
 
-**Bias:** -42.10 £/MWh (under-forecasting)
+**Bias:** -42.41 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE.
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **21** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **22** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
@@ -39,8 +39,8 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 30 | **+0.27** |
-| 90 days | 71 | **+0.12** |
+| 30 days | 30 | **+0.34** |
+| 90 days | 70 | **+0.12** |
 
 ### NO ACTION: correlation is +0.12.
 
