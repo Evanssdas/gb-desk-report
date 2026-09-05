@@ -1,22 +1,22 @@
 # Performance Scorecard
-_Auto-generated 2026-09-04. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-09-05. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **52**
+Graded days: **53**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 46.73 | 51.09 |
-| Benchmark: yesterday's price | 14.35 | 17.94 |
-| Benchmark: 7-day average | 14.77 | 20.04 |
-| Benchmark: same day last week | 21.34 | 28.86 |
+| **Model** | 46.64 | 50.93 |
+| Benchmark: yesterday's price | 14.42 | 17.94 |
+| Benchmark: 7-day average | 14.79 | 19.97 |
+| Benchmark: same day last week | 21.05 | 28.60 |
 
-**Directional accuracy:** 48% (did we call up/down correctly vs yesterday, over 52 days)
+**Directional accuracy:** 49% (did we call up/down correctly vs yesterday, over 53 days)
 
-**Bias:** -46.73 £/MWh (under-forecasting)
+**Bias:** -46.64 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE.
 
@@ -39,8 +39,8 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 30 | **+0.45** |
-| 90 days | 71 | **+0.15** |
+| 30 days | 30 | **+0.41** |
+| 90 days | 72 | **+0.15** |
 
 ### NO ACTION: correlation is +0.15.
 
