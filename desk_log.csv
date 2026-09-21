@@ -63,3 +63,4 @@ date_made,target_date,forecast,market,spread,lean,settled,signal_pnl,daily_vol_p
 2026-09-18,2026-09-19,,,,,,,12.6,2521.0,595.0,spread skipped: RuntimeError
 2026-09-19,2026-09-20,101.91,-2.04,103.95,LONG,,,20.5,-69.0,-21697.0,ok
 2026-09-20,2026-09-21,123.66,4.17,119.49,LONG,,,20.0,137.0,10927.0,ok
+2026-09-22,2026-09-23,,,,,,,14.7,3454.0,434.0,spread skipped: RuntimeError
