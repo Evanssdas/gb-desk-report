@@ -39,11 +39,11 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 29 | **+0.16** |
-| 90 days | 72 | **+0.19** |
+| 30 days | 29 | **+0.20** |
+| 90 days | 72 | **+0.20** |
 
-### NO ACTION: correlation is +0.19.
+### WATCH: correlation is +0.20.
 
-**Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
+Gas is starting to matter but has not yet cleared the 0.30 bar. Keep logging; re-check next month.
 
 _Why the threshold: a feature with a change-correlation near zero adds noise, and a gradient-booster will happily fit spurious patterns in it. The bar exists to stop that._
