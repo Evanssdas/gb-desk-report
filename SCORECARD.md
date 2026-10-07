@@ -1,5 +1,5 @@
 # Performance Scorecard
-_Auto-generated 2026-10-06. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-10-07. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
@@ -39,10 +39,10 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 29 | **+0.26** |
-| 90 days | 70 | **+0.27** |
+| 30 days | 29 | **+0.16** |
+| 90 days | 70 | **+0.21** |
 
-### WATCH: correlation is +0.27.
+### WATCH: correlation is +0.21.
 
 Gas is starting to matter but has not yet cleared the 0.30 bar. Keep logging; re-check next month.
 
