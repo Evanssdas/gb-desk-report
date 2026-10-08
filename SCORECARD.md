@@ -1,28 +1,28 @@
 # Performance Scorecard
-_Auto-generated 2026-10-07. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-10-08. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **82**
+Graded days: **83**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 56.90 | 62.49 |
-| Benchmark: yesterday's price | 17.77 | 23.13 |
-| Benchmark: 7-day average | 16.95 | 22.86 |
-| Benchmark: same day last week | 22.51 | 29.32 |
+| **Model** | 57.30 | 62.90 |
+| Benchmark: yesterday's price | 19.41 | 28.53 |
+| Benchmark: 7-day average | 16.86 | 22.75 |
+| Benchmark: same day last week | 22.58 | 29.30 |
 
-**Directional accuracy:** 52% (did we call up/down correctly vs yesterday, over 82 days)
+**Directional accuracy:** 53% (did we call up/down correctly vs yesterday, over 83 days)
 
-**Bias:** -56.90 £/MWh (under-forecasting)
+**Bias:** -57.30 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE.
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **24** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **25** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
@@ -39,11 +39,11 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 29 | **+0.16** |
-| 90 days | 70 | **+0.21** |
+| 30 days | 29 | **+0.05** |
+| 90 days | 71 | **+0.12** |
 
-### WATCH: correlation is +0.21.
+### NO ACTION: correlation is +0.12.
 
-Gas is starting to matter but has not yet cleared the 0.30 bar. Keep logging; re-check next month.
+**Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
 
 _Why the threshold: a feature with a change-correlation near zero adds noise, and a gradient-booster will happily fit spurious patterns in it. The bar exists to stop that._
