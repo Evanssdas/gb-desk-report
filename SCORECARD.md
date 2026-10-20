@@ -39,8 +39,8 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 29 | **+0.00** |
-| 90 days | 70 | **+0.09** |
+| 30 days | 30 | **+0.00** |
+| 90 days | 71 | **+0.09** |
 
 ### NO ACTION: correlation is +0.09.
 
