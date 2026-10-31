@@ -5,18 +5,18 @@ _Auto-generated 2026-10-31. Live, forward, out-of-sample. Not a backtest._
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **103**
+Graded days: **104**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 62.98 | 69.55 |
-| Benchmark: yesterday's price | 20.90 | 30.41 |
-| Benchmark: 7-day average | 19.00 | 26.78 |
-| Benchmark: same day last week | 26.24 | 37.51 |
+| **Model** | 63.30 | 69.86 |
+| Benchmark: yesterday's price | 21.13 | 30.58 |
+| Benchmark: 7-day average | 18.88 | 26.66 |
+| Benchmark: same day last week | 26.16 | 37.37 |
 
-**Directional accuracy:** 52% (did we call up/down correctly vs yesterday, over 103 days)
+**Directional accuracy:** 53% (did we call up/down correctly vs yesterday, over 104 days)
 
-**Bias:** -62.84 £/MWh (under-forecasting)
+**Bias:** -63.17 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE.
 
