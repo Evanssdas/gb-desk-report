@@ -1,22 +1,22 @@
 # Performance Scorecard
-_Auto-generated 2026-11-09. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-11-10. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **111**
+Graded days: **113**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 67.12 | 74.53 |
-| Benchmark: yesterday's price | 21.13 | 30.28 |
-| Benchmark: 7-day average | 19.21 | 26.57 |
-| Benchmark: same day last week | 27.05 | 38.57 |
+| **Model** | 69.89 | 80.98 |
+| Benchmark: yesterday's price | 22.99 | 37.37 |
+| Benchmark: 7-day average | 20.98 | 34.42 |
+| Benchmark: same day last week | 28.73 | 43.94 |
 
-**Directional accuracy:** 52% (did we call up/down correctly vs yesterday, over 111 days)
+**Directional accuracy:** 51% (did we call up/down correctly vs yesterday, over 113 days)
 
-**Bias:** -66.99 £/MWh (under-forecasting)
+**Bias:** -69.76 £/MWh (under-forecasting)
 
 **Verdict:** the model does NOT beat the persistence benchmark on MAE.
 
@@ -37,13 +37,4 @@ _No completed trades yet. A signal that rarely fires is not a fault: it means we
 
 _The model currently does **not** use gas as a feature. The pipeline logs TTF daily so the history accumulates; this test decides when it earns its place._
 
-| window | overlapping days | TTF-vs-price change correlation |
-|---|---:|---:|
-| 30 days | 30 | **-0.06** |
-| 90 days | 71 | **+0.01** |
-
-### NO ACTION: correlation is +0.01.
-
-**Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
-
-_Why the threshold: a feature with a change-correlation near zero adds noise, and a gradient-booster will happily fit spurious patterns in it. The bar exists to stop that._
+_Gas watch unavailable (AttributeError)._
