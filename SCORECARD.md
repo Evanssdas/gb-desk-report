@@ -1,5 +1,5 @@
 # Performance Scorecard
-_Auto-generated 2026-11-10. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-11-11. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
@@ -37,4 +37,13 @@ _No completed trades yet. A signal that rarely fires is not a fault: it means we
 
 _The model currently does **not** use gas as a feature. The pipeline logs TTF daily so the history accumulates; this test decides when it earns its place._
 
-_Gas watch unavailable (AttributeError)._
+| window | overlapping days | TTF-vs-price change correlation |
+|---|---:|---:|
+| 30 days | 29 | **-0.22** |
+| 90 days | 70 | **-0.07** |
+
+### NO ACTION: correlation is -0.07.
+
+**Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
+
+_Why the threshold: a feature with a change-correlation near zero adds noise, and a gradient-booster will happily fit spurious patterns in it. The bar exists to stop that._
