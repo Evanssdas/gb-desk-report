@@ -114,3 +114,4 @@ date_made,target_date,forecast,market,spread,lean,settled,signal_pnl,daily_vol_p
 2026-11-13,2026-11-14,,221.74,,FLAT,,,23.9,8741.0,172.0,ok
 2026-11-14,2026-11-15,141.06,273.35,-132.29,SHORT,,,21.7,9790.0,153.0,ok
 2026-11-15,2026-11-16,,,,,,,22.2,7466.0,201.0,spread skipped: RuntimeError
+2026-11-16,2026-11-17,,,,,,,22.5,9306.0,161.0,spread skipped: RuntimeError
