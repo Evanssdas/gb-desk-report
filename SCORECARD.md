@@ -1,5 +1,5 @@
 # Performance Scorecard
-_Auto-generated 2026-11-19. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-11-20. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
@@ -22,7 +22,7 @@ Graded days: **119**
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **31** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **32** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
@@ -39,10 +39,10 @@ _The model currently does **not** use gas as a feature. The pipeline logs TTF da
 
 | window | overlapping days | TTF-vs-price change correlation |
 |---|---:|---:|
-| 30 days | 29 | **-0.27** |
-| 90 days | 71 | **-0.13** |
+| 30 days | 29 | **-0.25** |
+| 90 days | 72 | **-0.14** |
 
-### NO ACTION: correlation is -0.13.
+### NO ACTION: correlation is -0.14.
 
 **Gas is not a useful feature right now.** Power is being priced by system scarcity rather than fuel cost, so adding TTF would fit noise. The data continues to accumulate in the price log; this test re-runs daily and will say so when that changes.
 
