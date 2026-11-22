@@ -1,11 +1,11 @@
 # Daily Risk Report
-_Generated 2026-11-21 - GB day-ahead power. Auto-updated daily._
+_Generated 2026-11-22 - GB day-ahead power. Auto-updated daily._
 
 ## Market conditions
 
 | metric | value |
 |---|---|
-| spot (last daily peak) | £245.88/MWh |
+| spot (last daily peak) | £232.68/MWh |
 | 30-day daily volatility | **22.9%** |
 | 90-day daily volatility | 20.9% |
 | 90-day range | £118 - £498/MWh |
@@ -20,10 +20,10 @@ VaR = position value x daily volatility x z. Using the 30-day volatility.
 
 | position | side | volume (MWh) | value (£) | VaR 95% (£) | VaR 99% (£) |
 |---|---|---|---|---|---|
-| GB power DA (reference) | long | 100 | 24,588 | 9,284 | 13,111 |
-| **PORTFOLIO** | | | **24,588** | **9,284** | **13,111** |
+| GB power DA (reference) | long | 100 | 23,268 | 8,804 | 12,432 |
+| **PORTFOLIO** | | | **23,268** | **8,804** | **12,432** |
 
-Interpretation: on roughly 1 day in 20, a loss of at least **£9,284** would be expected.
+Interpretation: on roughly 1 day in 20, a loss of at least **£8,804** would be expected.
 
 ## Stress tests
 
@@ -31,12 +31,12 @@ Deterministic shocks. Unlike VaR, these carry no probability - they size the sce
 
 | price shock | portfolio P&L (£) |
 |---|---|
-| -50% | -12,294 |
-| -20% | -4,918 |
-| -10% | -2,459 |
-| +10% | +2,459 |
-| +20% | +4,918 |
-| +50% | +12,294 |
+| -50% | -11,634 |
+| -20% | -4,654 |
+| -10% | -2,327 |
+| +10% | +2,327 |
+| +20% | +4,654 |
+| +50% | +11,634 |
 
 Note: the worst single day in the last 90 was **-44.0%**, so the larger shocks above are not hypothetical.
 
@@ -45,13 +45,13 @@ Note: the worst single day in the last 90 was **-44.0%**, so the larger shocks a
 | limit | set | current | status |
 |---|---|---|---|
 | max single position | 20,000 MWh | 100 MWh | OK |
-| max portfolio VaR (95%) | £15,000 | £9,284 | OK |
+| max portfolio VaR (95%) | £15,000 | £8,804 | OK |
 
 ## Position sizing at current volatility
 
 At **22.9%** daily volatility and a £15,000 VaR limit, the largest permissible position is:
 
-### **162 MWh**
+### **170 MWh**
 
 Volatility dictates size. When volatility rises, the permissible position falls, even if conviction does not.
 
