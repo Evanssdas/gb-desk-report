@@ -1,13 +1,13 @@
 # Daily Risk Report
-_Generated 2026-11-22 - GB day-ahead power. Auto-updated daily._
+_Generated 2026-11-23 - GB day-ahead power. Auto-updated daily._
 
 ## Market conditions
 
 | metric | value |
 |---|---|
-| spot (last daily peak) | £232.68/MWh |
+| spot (last daily peak) | £233.67/MWh |
 | 30-day daily volatility | **22.9%** |
-| 90-day daily volatility | 20.9% |
+| 90-day daily volatility | 20.8% |
 | 90-day range | £118 - £498/MWh |
 | worst single-day move (90d) | -44.0% |
 
@@ -20,10 +20,10 @@ VaR = position value x daily volatility x z. Using the 30-day volatility.
 
 | position | side | volume (MWh) | value (£) | VaR 95% (£) | VaR 99% (£) |
 |---|---|---|---|---|---|
-| GB power DA (reference) | long | 100 | 23,268 | 8,804 | 12,432 |
-| **PORTFOLIO** | | | **23,268** | **8,804** | **12,432** |
+| GB power DA (reference) | long | 100 | 23,367 | 8,838 | 12,480 |
+| **PORTFOLIO** | | | **23,367** | **8,838** | **12,480** |
 
-Interpretation: on roughly 1 day in 20, a loss of at least **£8,804** would be expected.
+Interpretation: on roughly 1 day in 20, a loss of at least **£8,838** would be expected.
 
 ## Stress tests
 
@@ -31,12 +31,12 @@ Deterministic shocks. Unlike VaR, these carry no probability - they size the sce
 
 | price shock | portfolio P&L (£) |
 |---|---|
-| -50% | -11,634 |
-| -20% | -4,654 |
-| -10% | -2,327 |
-| +10% | +2,327 |
-| +20% | +4,654 |
-| +50% | +11,634 |
+| -50% | -11,684 |
+| -20% | -4,673 |
+| -10% | -2,337 |
+| +10% | +2,337 |
+| +20% | +4,673 |
+| +50% | +11,684 |
 
 Note: the worst single day in the last 90 was **-44.0%**, so the larger shocks above are not hypothetical.
 
@@ -45,7 +45,7 @@ Note: the worst single day in the last 90 was **-44.0%**, so the larger shocks a
 | limit | set | current | status |
 |---|---|---|---|
 | max single position | 20,000 MWh | 100 MWh | OK |
-| max portfolio VaR (95%) | £15,000 | £8,804 | OK |
+| max portfolio VaR (95%) | £15,000 | £8,838 | OK |
 
 ## Position sizing at current volatility
 
