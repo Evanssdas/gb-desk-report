@@ -1,20 +1,20 @@
 # Performance Scorecard
-_Auto-generated 2026-11-24. Live, forward, out-of-sample. Not a backtest._
+_Auto-generated 2026-11-25. Live, forward, out-of-sample. Not a backtest._
 
 > Two scorecards below, kept separate on purpose. **Accuracy** asks whether the forecast is right. **Signal performance** asks whether acting on it makes money after costs. These are different questions, and a model can pass the first while failing the second.
 
 ## A. Forecast accuracy (price model)
 
-Graded days: **121**
+Graded days: **122**
 
 | model / benchmark | MAE (£/MWh) | RMSE (£/MWh) |
 |---|---|---|
-| **Model** | 71.78 | 82.35 |
-| Benchmark: yesterday's price | 23.12 | 36.96 |
-| Benchmark: 7-day average | 21.65 | 34.65 |
-| Benchmark: same day last week | 29.91 | 48.47 |
+| **Model** | 71.79 | 82.27 |
+| Benchmark: yesterday's price | 23.12 | 36.87 |
+| Benchmark: 7-day average | 21.58 | 34.53 |
+| Benchmark: same day last week | 29.76 | 48.28 |
 
-**Directional accuracy:** 50% (did we call up/down correctly vs yesterday, over 121 days)
+**Directional accuracy:** 51% (did we call up/down correctly vs yesterday, over 122 days)
 
 **Bias:** -71.67 £/MWh (under-forecasting)
 
@@ -22,7 +22,7 @@ Graded days: **121**
 
 ## B. Signal performance (does acting on it pay?)
 
-Signal frequency: **0** LONG/SHORT, **32** FLAT (no trade)
+Signal frequency: **0** LONG/SHORT, **33** FLAT (no trade)
 
 _No completed trades yet. A signal that rarely fires is not a fault: it means we rarely disagree with the market by enough to act._
 
